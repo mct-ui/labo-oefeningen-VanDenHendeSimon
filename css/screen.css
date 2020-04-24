@@ -31,8 +31,9 @@
 */
 
 html {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 200;
     font-family: "Clear Sans", Helvetica, arial, sans-serif;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
