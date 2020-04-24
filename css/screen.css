@@ -36,6 +36,9 @@ html {
     font-weight: 200;
     font-family: "Clear Sans", Helvetica, arial, sans-serif;
     box-sizing: border-box;
+    background: linear-gradient(to bottom right, #0A257D,#061649);
+    background-attachment: fixed;
+    color: white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
