@@ -133,7 +133,7 @@ figure {
 
 ul,
 ol {
-    padding-left: 24px;
+    padding-left: 0;
 }
 
 li ul,
@@ -222,9 +222,10 @@ a {
 */
 
 .o-container {
+    /* margings op auto voor te centreren */
     margin-left: auto;
     margin-right: auto;
-    max-width: 56.4em; /* 56.4 * 20px = 1128px */
+    max-width: 71em; /* 1278px / 18px */
 }
 
 /*
@@ -264,6 +265,7 @@ a {
 
 .o-layout {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 
@@ -378,6 +380,7 @@ a {
 .o-list {
     list-style: none;
     padding: 0;
+    margin-bottom: 0;
 }
 
 /*------------------------------------*\
@@ -395,15 +398,59 @@ a {
 .c-header__nav {
     text-transform: uppercase;
     letter-spacing: 1px;    /* Extra ruimte tss de letters */
+    margin-top: 36px;
+}
+
+.c-nav__item {
+    padding-bottom: 16px;
 }
 
 .c-nav__link {
+    font-weight: 400; /* regular */
     text-decoration: none;
     color: white;
+    transition: all 0.1s ease-in-out;
+}
+
+.c-nav__link:hover {
+    text-shadow: 0 0 8px #8EC7FF;
+    color: #DBEDFF;
 }
 
 .c-nav__link--active {
     text-shadow: 0 0 8px #8EC7FF;
+}
+
+@media (min-width: 992px) {
+    .c-header {
+        display: flex;
+        flex-wrap: wrap;
+        /* main axis */
+        justify-content: space-between;
+        /* cross axis */
+        align-items: center;
+    }
+
+    .c-header__nav {
+        margin-top: 0;
+    }
+
+    .c-nav__item {
+        padding-bottom: 0;
+        padding: 16px 32px;
+    }
+
+    .c-nav__list {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+/*
+    Components: CTA
+*/
+.c-btn--cta {
+    background-color: #000;
 }
 
 /*------------------------------------*\
