@@ -141,6 +141,11 @@ li ol {
     margin-bottom: 0;
 }
 
+/* max height svg = height vd parent */
+svg {
+    height: 100%;
+}
+
 blockquote {
     font-style: normal;
     font-size: 23px;
@@ -168,15 +173,7 @@ hr {
 }
 
 a {
-    color: #1195F7;
     transition: all .1s ease-in-out;
-}
-
-a:visited,
-a:active,
-a:hover,
-a:focus {
-    color: #8EC7FF;
 }
 
 /*------------------------------------*\
@@ -387,13 +384,26 @@ a:focus {
   #COMPONENTS
 \*------------------------------------*/
 
+.c-header__logo {
+    height: 32px;
+}
+
 /*
     Components: Navigation
 */
-.c-nav {
+
+.c-header__nav {
     text-transform: uppercase;
     letter-spacing: 1px;    /* Extra ruimte tss de letters */
+}
 
+.c-nav__link {
+    text-decoration: none;
+    color: white;
+}
+
+.c-nav__link--active {
+    text-shadow: 0 0 8px #8EC7FF;
 }
 
 /*------------------------------------*\
